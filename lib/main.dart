@@ -30,6 +30,9 @@ class MyHomePage extends StatelessWidget {
     ),
   ];
 
+  late String titleInput;
+  late String amountInput;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
