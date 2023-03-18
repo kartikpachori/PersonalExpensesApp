@@ -29,7 +29,7 @@ class MyHomePage extends StatelessWidget {
       date: DateTime.now(),
     ),
   ];
-
+  late String Kartikey;
   late String titleInput;
   late String amountInput;
 
@@ -37,10 +37,10 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter App'),
+        title: const Text('Flutter App'),
       ), // AppBar
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
@@ -49,6 +49,15 @@ class MyHomePage extends StatelessWidget {
               color: Colors.blue,
               elevation: 5,
               child: Text('CHART!'),
+            ),
+          ),
+          Card(
+            elevation: 5,
+            child: Column(
+              children: <Widget>[
+                TextField(),
+                TextField(),
+              ],
             ),
           ),
           Column(
