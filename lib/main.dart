@@ -29,7 +29,7 @@ class MyHomePage extends StatelessWidget {
       date: DateTime.now(),
     ),
   ];
-  late String Kartikey;
+
   late String titleInput;
   late String amountInput;
 
