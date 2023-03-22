@@ -32,7 +32,6 @@ class MyHomePage extends StatelessWidget {
 
   late String titleInput;
   late String amountInput;
-  late String kunal;
 
   @override
   Widget build(BuildContext context) {
@@ -54,11 +53,26 @@ class MyHomePage extends StatelessWidget {
           ),
           Card(
             elevation: 5,
-            child: Column(
-              children: <Widget>[
-                TextField(),
-                TextField(),
-              ],
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Title'),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Amount'),
+                  ),
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      primary: Colors.purple,
+                    ),
+                    onPressed: () {},
+                    child: Text('Add Transaction'),
+                  )
+                ],
+              ),
             ),
           ),
           Column(
