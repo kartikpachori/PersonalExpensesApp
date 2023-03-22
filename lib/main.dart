@@ -32,6 +32,7 @@ class MyHomePage extends StatelessWidget {
 
   late String titleInput;
   late String amountInput;
+  late String kunal;
 
   @override
   Widget build(BuildContext context) {
