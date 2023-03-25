@@ -3,6 +3,8 @@ import 'package:great_places_app/widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import './models/transaction.dart';
 
+bool debugPaintSizeEnabled = false;
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -14,6 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Personal Expenses',
       home: MyHomePage(),
     ); // MaterialApp
