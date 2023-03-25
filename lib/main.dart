@@ -14,7 +14,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      title: 'Personal Expenses',
       home: MyHomePage(),
     ); // MaterialApp
   }
@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [
     Transaction(
       id: 't1',
-      title: 'new shoes',
+      title: 'New Shoes',
       amount: 60.00,
       date: DateTime.now(),
     ),
@@ -72,7 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter App'),
+        backgroundColor: Color.fromARGB(255, 49, 70, 153),
+        title: const Text('Personal Expenses'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
@@ -90,7 +91,6 @@ class _MyHomePageState extends State<MyHomePage> {
               child: const Card(
                 color: Colors.blue,
                 elevation: 5,
-                child: Text('CHART!'),
               ),
             ),
             TransactionList(_userTransactions),
@@ -100,6 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
+        backgroundColor: Colors.yellow[800],
+        focusColor: Colors.black,
         onPressed: () => _startAddNewTransaction(context),
       ), // Center
     ); // Scaffold

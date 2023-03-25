@@ -25,7 +25,7 @@ class TransactionList extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.purple,
+                      color: Color.fromARGB(255, 0, 0, 0),
                       width: 2,
                     ),
                   ),
@@ -35,7 +35,7 @@ class TransactionList extends StatelessWidget {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
-                      color: Colors.purple,
+                      color: Color.fromARGB(255, 39, 103, 176),
                     ),
                   ),
                 ),
@@ -49,7 +49,8 @@ class TransactionList extends StatelessWidget {
                     ),
                     Text(
                       DateFormat.yMMMd().format(transactions[index].date),
-                      style: const TextStyle(color: Colors.grey),
+                      style: const TextStyle(
+                          color: Color.fromARGB(255, 79, 74, 171)),
                     ),
                   ],
                 ),
