@@ -59,7 +59,7 @@ class TransactionList extends StatelessWidget {
                     title: Text(transactions[index].title,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 23,
+                          fontSize: 18,
                         )),
                     subtitle: Text(
                       DateFormat.yMMMd().format(transactions[index].date),
