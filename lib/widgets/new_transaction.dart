@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-class Newtransaction extends StatefulWidget {
+class NewTransaction extends StatefulWidget {
   final Function addTx;
 
-  Newtransaction(this.addTx);
+  NewTransaction(this.addTx);
 
   @override
-  State<Newtransaction> createState() => _NewtransactionState();
+  State<NewTransaction> createState() => _NewTransactionState();
 }
 
-class _NewtransactionState extends State<Newtransaction> {
-  final titlecontroller = TextEditingController();
+class _NewTransactionState extends State<NewTransaction> {
+  final titleController = TextEditingController();
 
-  final amountcontroller = TextEditingController();
+  final amountController = TextEditingController();
 
   void submitData() {
-    final enteredTitle = titlecontroller.text;
-    final enteredAmount = double.parse(amountcontroller.text);
+    final enteredTitle = titleController.text;
+    final enteredAmount = double.parse(amountController.text);
 
     if (enteredTitle.isEmpty || enteredAmount <= 0) {
       return;
@@ -35,29 +35,52 @@ class _NewtransactionState extends State<Newtransaction> {
     return Card(
       elevation: 5,
       child: Container(
-        padding: const EdgeInsets.all(10),
+        padding: EdgeInsets.all(10),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             TextField(
               decoration: InputDecoration(labelText: 'Title'),
-              controller: titlecontroller,
+              controller: titleController,
               onSubmitted: (_) => submitData(),
+              // onChanged: (val) {
+              //   titleInput=val;
+              // },
             ),
             TextField(
               decoration: InputDecoration(labelText: 'Amount'),
-              controller: amountcontroller,
-              keyboardType:
-                  const TextInputType.numberWithOptions(decimal: true),
+              controller: amountController,
+              keyboardType: TextInputType.number,
               onSubmitted: (_) => submitData(),
+              //onChanged: (val) => amountInput=val,
             ),
-            TextButton(
-              child: Text('Add Transaction'),
-              style: TextButton.styleFrom(
-                primary: Color.fromARGB(255, 39, 176, 165),
+            Container(
+              height: 70,
+              child: Row(
+                children: [
+                  Text('No date Chosen!'),
+                  TextButton(
+                    child: Text(
+                      'Choose Date',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 242, 68, 37)),
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
               ),
+            ),
+            ElevatedButton(
+              child: Text('Add Transaction',
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold)),
+
               onPressed: submitData,
-            )
+
+              style: ElevatedButton.styleFrom(
+                  primary: Color.fromARGB(255, 16, 153, 137),
+                  onPrimary: Color.fromARGB(255, 138, 179, 78)), // Text Color
+            ),
           ],
         ),
       ),
