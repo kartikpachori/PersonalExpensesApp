@@ -78,8 +78,9 @@ class _NewTransactionState extends State<NewTransaction> {
               onPressed: submitData,
 
               style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 16, 153, 137),
-                  onPrimary: Color.fromARGB(255, 138, 179, 78)), // Text Color
+                  foregroundColor: Color.fromARGB(255, 138, 179, 78),
+                  backgroundColor:
+                      Color.fromARGB(255, 16, 153, 137)), // Text Color
             ),
           ],
         ),

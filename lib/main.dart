@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.teal,
-        accentColor: Colors.amber,
-        canvasColor: Color.fromARGB(255, 214, 234, 244),
+        hintColor: Colors.amber,
+        canvasColor: Color.fromARGB(255, 205, 94, 94),
         fontFamily: 'Quicksand',
         // appBarTheme: AppBarTheme(
         //   textTheme: ThemeData.light().textTheme.copyWith(
@@ -94,7 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(186, 255, 255, 255),
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(187, 19, 231, 223),
         title: Text(
           'Personal Expenses',
           style: TextStyle(fontFamily: 'OpenSans'),
